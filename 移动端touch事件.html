@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端touch事件</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <style>
+        *{padding:0;margin:0;}
+        body{
+            background:#CCC;
+            height:100%;
+        }
+        html{height: 100%;}
+        div{
+            width:20px;
+            height: 20px;
+            border:1px solid;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        window.onload = function () {
+            let divObj = document.querySelector("div");
+            // 定义一些变量用来存储有关移动的值
+            let distance  = {
+                startX:0,
+                startY:0,
+                moveX:0,
+                moveY:0,
+                initX:0,
+                initY:0
+            }
+
+            // 关于移动端touch事件有3个，手指按下 手指移动 手指松开
+            // 手指按下事件
+            divObj.addEventListener("touchstart",function (e) {
+                distance.startX = e.touches[0].clientX;
+                distance.startY = e.touches[0].clientY;
+            })
+            // 手指移动
+            divObj.addEventListener("touchmove",function (e) {
+                distance.moveX = e.touches[0].clientX - distance.startX;// X轴方向移动的距离
+                distance.moveY = e.touches[0].clientY - distance.startY;// Y轴方向移动的距离
+                // divObj.style.transform = "translateX("+(distance.initX + distance.moveX)+"px)";
+                divObj.style.transform = "translate("+(distance.initX + distance.moveX)+"px,+"+(distance.initY + distance.moveY)+"px)";
+            })
+            // 手指离开事件
+            divObj.addEventListener("touchend",function (e) {
+                distance.initX += distance.moveX;
+                distance.initY += distance.moveY;
+            })
+        }
+
+    </script>
+</body>
+</html>

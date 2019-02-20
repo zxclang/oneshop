@@ -1,0 +1,210 @@
+@charset "utf-8";
+.jd_container{
+    width:100%;
+    background:#ccc;
+    margin:0 auto;
+}
+/* header */
+.jd_header{
+    width:100%;
+    height:40px;
+    padding-top:5px;
+    background-color: rgba(201,21,35,0);/*调试用，后期要删掉*/
+    position: fixed;
+    padding-left:70px;
+    padding-right:60px;
+    z-index: 99;
+}
+.jd_header .header_logo{
+    width: 60px;
+    height: 36px;
+    display:block;
+    position:absolute;
+    left:5px;
+    top:5px;
+    /*设置背景图*/
+    background-image:url("../images/sprites.png");
+    background-repeat: no-repeat;
+    background-position: 0px -103px;
+
+    background-size:200px 200px;
+}
+.jd_header .icon_search{
+    display:block;
+    width:20px;
+    height:20px;
+    background: url("../images/sprites.png") no-repeat -58px -110px/200px 200px;
+    position:absolute;
+    top:12px;
+    left:75px;
+}
+.jd_header .search{
+    width: 100%;
+    height:30px;
+    border-radius: 15px;
+    padding-left:40px;
+}
+.jd_header .header_login{
+    position: absolute;
+    right:10px;
+    top:0;
+    font-size: 16px;
+    color:#eee;
+    line-height: 40px;
+}
+/* header end */
+/* banner start */
+.jd_banner{width:100%;overflow: hidden; position:relative;}
+.jd_banner .banner_images{width:800%;}
+.jd_banner .banner_images li{float:left;width:calc(100%/8);}
+.jd_banner .banner_images li a{display:block;width:100%;}
+.jd_banner .banner_images li a img{width:100%;}
+
+.jd_banner .banner_index{
+    position:absolute;
+    bottom:3px;
+    width:100%;
+    text-align:center;
+}
+.jd_banner .banner_index li{
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border:1px solid #eee;
+    border-radius: 50%;
+    margin:0 1px;
+}
+.jd_banner .banner_index li.current{
+    background-color: gold;
+}
+/* banner end */
+
+/* nav start */
+.jd_nav{
+    width:100%;
+    padding:10px;
+    background:#fff;
+    margin:10px 0;
+}
+.jd_nav ul{
+    width:100%;
+}
+.jd_nav ul li{
+    width:20%;
+    float:left;
+    text-align: center;
+}
+.jd_nav ul li a{
+    dislplay:block;
+    width:100%;
+}
+.jd_nav ul li a img{
+    width:50%;
+}
+.jd_nav ul li a span{
+    display:block;
+    padding:5px;
+}
+/* nav end */
+
+/* main start */
+.jd_main .main_seckill{width:100%;background:#fff;}
+.jd_main .main_seckill .seckill_top{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.jd_main .main_seckill .seckill_top div{
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size: 20px 25px;
+    width:20px;
+    height:25px;
+    margin:6px 5px 0;
+}
+.jd_main .main_seckill .seckill_top p{
+    color:rgb(201,21,35);
+    line-height: 40px;
+}
+.jd_main .main_seckill .seckill_top ul{
+    margin-top:10px;
+    margin-left:10px;
+}
+.jd_main .main_seckill .seckill_top ul li{
+    float:left;
+    background:#000;
+    width:15px;
+    height:20px;
+    color:#fff;
+    line-height:20px;
+    text-align:center;
+    margin-left:3px;
+}
+.jd_main .main_seckill .seckill_top ul li:nth-of-type(3n){
+    background-color: #fff;
+    color:#000;
+}
+.jd_main .main_seckill .seckill_top a{}
+
+
+.jd_main .main_seckill .seckill_bottom{
+    width:100%;
+}
+.jd_main .main_seckill .seckill_bottom li{
+    width:33.3333%;
+    float:left;
+    text-align: center;
+}
+.jd_main .main_seckill .seckill_bottom li img{
+    width:70%;
+}
+.jd_main .main_seckill .seckill_bottom li p:nth-of-type(1){
+    color:rgb(201,21,35);
+    font-weight:bold;
+    font-size:1.3em;
+}
+.jd_main .main_seckill .seckill_bottom li p:nth-of-type(2) {
+    font-size:0.9em;
+    text-decoration:line-through;
+    color:#aaa;
+}
+.jd_main .main_product{
+    margin-top:10px;
+    background-color: #fff;
+    width:100%;
+
+}
+.jd_main .main_product .product_top{
+    border-bottom:1px solid #ccc;
+
+}
+.jd_main .main_product .product_top h3{
+    font-weight: normal;
+    font-size:16px;
+    height:38px;
+    line-height: 38px;
+    position: relative;
+    margin-left: 10px;
+}
+.jd_main .main_product .product_top h3::before{
+    content: "";
+    display:block;
+    width:3px;
+    height:15px;
+    position: absolute;
+    background-color: #f00;
+    top:12px;
+    left:-6px;
+}
+
+
+
+
+
+.jd_main .main_product .product_bottom ul li{
+    width:50%;
+}
+.border_l{border-left:1px solid #ccc;}
+.border_r{border-right:1px solid #ccc;}
+.border_t{border-top:1px solid #ccc;}
+.border_b{border-bottom:1px solid #ccc;}
+/* main end */
